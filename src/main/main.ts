@@ -1,3 +1,4 @@
+// src/main.ts
 import { app, BrowserWindow, screen } from "electron";
 import * as path from "path";
 
@@ -5,9 +6,8 @@ function createWindow() {
   const { width: screenW, height: screenH } = screen.getPrimaryDisplay().workAreaSize;
   const winW = 280;
   const winH = 220;
-  const margin = 0;
   const x = screenW - winW;
-  const y = margin;
+  const y = 0;
 
   const win = new BrowserWindow({
     width: winW,
@@ -18,18 +18,18 @@ function createWindow() {
     resizable: false,
     backgroundColor: "#ffffff",
 
+    // ← add these:
+    frame: false,
     titleBarStyle: "hiddenInset",
     trafficLightPosition: { x: 12, y: 12 },
+
     hasShadow: true,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
   });
 
-  win.loadFile(path.join(__dirname, "../dist/renderer/index.html"));
+  win.loadFile(path.join(__dirname, '../../public/index.html'));
 }
 
 app.whenReady().then(createWindow);
-app.on("activate", () => {
-  if (BrowserWindow.getAllWindows().length === 0) createWindow();
-});

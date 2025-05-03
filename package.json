@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build:main": "tsc",
-    "build:renderer": "parcel build src/renderer/index.html --target renderer",
+    "build:renderer": "parcel build src/static/index.html --target renderer",
     "build": "npm run build:main && npm run build:renderer",
     "start": "npm run build && electron ."
   },
