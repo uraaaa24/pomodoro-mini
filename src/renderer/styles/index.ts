@@ -40,8 +40,8 @@ export const styles: Record<string, CSSProperties> = {
     WebkitAppRegion: 'no-drag',
     display: 'flex',
     alignItems: 'center',
-    gap: 4,
-    fontSize: 8,
+    gap: 6,
+    fontSize: 10,
     color: '#999',
   },
   dot: {
@@ -54,7 +54,7 @@ export const styles: Record<string, CSSProperties> = {
     alignItems: 'center',
     justifyContent: 'center',
     gap: 12,
-    marginTop: 8,
+    marginTop: 4,
   },
   controlButton: {
     WebkitAppRegion: 'no-drag',
@@ -69,6 +69,6 @@ export const styles: Record<string, CSSProperties> = {
     justifyContent: 'center',
   },
   reset: {
-    fontSize: 24,
+    fontSize: 24
   }
 };
