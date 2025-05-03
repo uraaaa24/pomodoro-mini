@@ -14,8 +14,8 @@ export const styles: Record<string, CSSProperties> = {
   },
   input: {
     WebkitAppRegion: 'no-drag',
-    width: '85%',
-    padding: '6px 0',
+    width: '80%',
+    padding: '6px',
     border: 'none',
     borderBottom: '1px solid #ccc',
     fontSize: 14,
@@ -69,6 +69,7 @@ export const styles: Record<string, CSSProperties> = {
     justifyContent: 'center',
   },
   reset: {
-    fontSize: 24
+    fontSize: 24,
+    color: '#777',
   }
 };

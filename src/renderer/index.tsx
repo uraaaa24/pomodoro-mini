@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useMemo, CSSProperties } from 'react';
+import { useState, useMemo, CSSProperties } from 'react';
 import { createRoot } from 'react-dom/client';
 import { usePomodoro } from './hooks/use-pomodoro';
 import DotNav from './components/dot-nav';
