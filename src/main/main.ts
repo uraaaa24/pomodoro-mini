@@ -16,9 +16,8 @@ function createWindow() {
     useContentSize: true,
     alwaysOnTop: true,
     resizable: false,
-    backgroundColor: "#ffffff",
+    backgroundColor: "#efefef",
 
-    // ← add these:
     frame: false,
     titleBarStyle: "hiddenInset",
     trafficLightPosition: { x: 12, y: 12 },
