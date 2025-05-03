@@ -8,7 +8,6 @@ const PADDING = 20;
 const GAP = 8;
 const INPUT_WIDTH = "85%";
 
-// ———— スタイルまとめ ————
 const styles: Record<string, CSSProperties> = {
   container: {
     display: "flex",
@@ -80,8 +79,17 @@ const App = () => {
   const [isWork, setIsWork] = useState(true);
   const [running, setRunning] = useState(false);
 
+  // 起動時に通知の許可をリクエスト
+  useEffect(() => {
+    if (Notification.permission !== "granted") {
+      Notification.requestPermission();
+    }
+  }, []);
+
+  // タイマーが0になったら通知を表示
   useEffect(() => {
     if (!running) return;
+
     const id = setInterval(() => {
       setSeconds((sec) => {
         if (sec <= 1) {
@@ -93,6 +101,7 @@ const App = () => {
         return sec - 1;
       });
     }, 1000);
+
     return () => clearInterval(id);
   }, [running, isWork]);
 

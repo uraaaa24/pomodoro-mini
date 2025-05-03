@@ -1,4 +1,3 @@
-// src/main.ts
 import { app, BrowserWindow, screen } from "electron";
 import * as path from "path";
 
